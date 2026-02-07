@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bidaya - Cours disponibles</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Cours disponibles</h1>
+        <p>Découvrez les parcours disponibles et débloquez les modules premium.</p>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="courses.html">Cours</a>
+          <a href="index.html" id="logout">Déconnexion</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="card">
+        <h3>Tous les cours</h3>
+        <div id="courses-list" class="list"></div>
+      </section>
+      <section class="card">
+        <h3>Niveaux et contenus</h3>
+        <div id="levels-list" class="list"></div>
+        <div id="content-list" class="list" style="margin-top: 16px;"></div>
+      </section>
+    </main>
+    <script type="module" src="js/student.js"></script>
+  </body>
+</html>

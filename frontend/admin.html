@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bidaya - Administration</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Tableau de bord administrateur</h1>
+        <p>Bienvenue <strong id="admin-name"></strong>. Gérez les cours, contenus et paiements.</p>
+        <nav>
+          <a href="admin.html">Admin</a>
+          <a href="index.html" id="logout">Déconnexion</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="grid two">
+        <div class="card">
+          <h3>Nouveau cours</h3>
+          <form id="course-form">
+            <label>Titre</label>
+            <input type="text" name="title" required />
+            <label>Description</label>
+            <textarea name="description" rows="3" required></textarea>
+            <label>
+              <input type="checkbox" name="isPaid" /> Cours payant
+            </label>
+            <label>Prix</label>
+            <input type="number" name="price" min="0" step="0.01" />
+            <button type="submit">Créer</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Ajouter un niveau</h3>
+          <form id="level-form">
+            <label>ID du cours</label>
+            <input type="number" name="courseId" required />
+            <label>Nom du niveau</label>
+            <input type="text" name="name" required />
+            <label>Ordre</label>
+            <input type="number" name="orderIndex" required />
+            <button type="submit">Ajouter</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="grid two">
+        <div class="card">
+          <h3>Ajouter un contenu</h3>
+          <form id="content-form">
+            <label>ID du niveau</label>
+            <input type="number" name="levelId" required />
+            <label>Type</label>
+            <select name="type" required>
+              <option value="VIDEO">Vidéo</option>
+              <option value="AUDIO">Audio</option>
+              <option value="PDF">PDF</option>
+            </select>
+            <label>Titre</label>
+            <input type="text" name="title" required />
+            <label>URL</label>
+            <input type="url" name="url" required />
+            <button type="submit">Ajouter</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Créer un quiz</h3>
+          <form id="quiz-form">
+            <label>ID du niveau</label>
+            <input type="number" name="levelId" required />
+            <label>Note minimale (%)</label>
+            <input type="number" name="passingScore" required />
+            <button type="submit">Créer</button>
+          </form>
+          <hr style="margin:16px 0; border:none; border-top:1px solid #e5e7eb;" />
+          <form id="question-form">
+            <label>ID du quiz</label>
+            <input type="number" name="quizId" required />
+            <label>Question</label>
+            <input type="text" name="questionText" required />
+            <label>Options (séparées par ;) </label>
+            <input type="text" name="options" placeholder="Option 1; Option 2" required />
+            <label>Index bonne réponse</label>
+            <input type="number" name="correctIndex" required />
+            <button type="submit">Ajouter la question</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Cours disponibles</h3>
+        <div id="course-list" class="list"></div>
+      </section>
+
+      <section class="grid two">
+        <div class="card">
+          <h3>Étudiants</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Inscription</th>
+              </tr>
+            </thead>
+            <tbody id="student-table"></tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Paiements</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Étudiant</th>
+                <th>Cours</th>
+                <th>Montant</th>
+                <th>Statut</th>
+              </tr>
+            </thead>
+            <tbody id="payment-table"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Progression d'un étudiant</h3>
+        <form id="student-progress-form">
+          <label>ID Étudiant</label>
+          <input type="number" name="studentId" required />
+          <button type="submit">Afficher la progression</button>
+        </form>
+        <div style="margin-top: 16px;">
+          <h4>Progression par cours</h4>
+          <div id="student-progress-list" class="list"></div>
+        </div>
+        <div style="margin-top: 16px;">
+          <h4>Résultats de quiz</h4>
+          <div id="student-results-list" class="list"></div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bidaya - Tableau de bord étudiant</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Tableau de bord étudiant</h1>
+        <p>Bonjour <strong id="student-name"></strong>. Continuez votre parcours à votre rythme.</p>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="courses.html">Cours</a>
+          <a href="index.html" id="logout">Déconnexion</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="card">
+        <h3>Progression</h3>
+        <div id="progress-list" class="list"></div>
+      </section>
+
+      <section class="card">
+        <h3>Mes cours</h3>
+        <div id="courses-list" class="list"></div>
+      </section>
+
+      <section class="card">
+        <h3>Niveaux et contenus</h3>
+        <div id="levels-list" class="list"></div>
+        <div id="content-list" class="list" style="margin-top: 16px;"></div>
+      </section>
+
+      <section class="card">
+        <h3>Historique des paiements</h3>
+        <div id="payment-list" class="list"></div>
+      </section>
+
+      <section class="card">
+        <h3>Résultats des quiz</h3>
+        <div id="results-list" class="list"></div>
+      </section>
+
+      <section class="card" id="quiz-section">
+        <h3>Quiz en cours</h3>
+        <form id="quiz-form" style="display:none;">
+          <div id="quiz-questions"></div>
+          <button type="submit">Soumettre</button>
+        </form>
+        <p id="quiz-result" class="notice"></p>
+      </section>
+    </main>
+    <script type="module" src="js/student.js"></script>
+  </body>
+</html>
