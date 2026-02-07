@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bidaya - Plateforme e-learning</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">
+          <span class="logo">B</span>
+          <div>
+            <h1>Bidaya</h1>
+            <p>Plateforme de cours en ligne</p>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <button class="ghost">Connexion</button>
+          <button class="primary">Créer un compte</button>
+        </div>
+      </nav>
+      <section class="hero-content">
+        <div>
+          <h2>Apprenez. Progressez. Validez.</h2>
+          <p>
+            Bidaya offre une expérience pédagogique complète avec des cours gratuits ou payants, des
+            niveaux structurés et des quiz certifiants.
+          </p>
+          <div class="hero-buttons">
+            <button class="primary">Explorer les cours</button>
+            <button class="secondary">Voir la démo</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Progression globale</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 72%"></div>
+          </div>
+          <div class="stat-grid">
+            <div>
+              <strong>12</strong>
+              <span>Cours actifs</span>
+            </div>
+            <div>
+              <strong>91%</strong>
+              <span>Quiz validés</span>
+            </div>
+          </div>
+          <p class="badge">Intégration LengoPay prête</p>
+        </div>
+      </section>
+    </header>
+
+    <main class="container">
+      <section class="toggle">
+        <button class="tab active" data-tab="student">Espace Étudiant</button>
+        <button class="tab" data-tab="admin">Espace Admin</button>
+      </section>
+
+      <section class="dashboard" id="student">
+        <div class="dashboard-header">
+          <h3>Tableau de bord Étudiant</h3>
+          <span class="chip">Progression 45%</span>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h4>Marketing Digital - Niveau Débutant</h4>
+            <p>Accès libre · 8 modules · Quiz final</p>
+            <button class="primary">Reprendre le cours</button>
+          </article>
+          <article class="card">
+            <h4>Développement Web - Niveau Intermédiaire</h4>
+            <p>Payant · Débloqué via LengoPay</p>
+            <button class="secondary">Continuer</button>
+          </article>
+          <article class="card locked">
+            <h4>Gestion de projet - Niveau Avancé</h4>
+            <p>Payant · Verrouillé</p>
+            <button class="ghost">Payer le cours</button>
+          </article>
+        </div>
+        <div class="results">
+          <div>
+            <h4>Notes obtenues</h4>
+            <ul>
+              <li>Marketing Digital: 18/20</li>
+              <li>Développement Web: 15/20</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Statut de paiement</h4>
+            <ul>
+              <li>Cours Dév Web: Payé</li>
+              <li>Gestion de projet: Non payé</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard hidden" id="admin">
+        <div class="dashboard-header">
+          <h3>Tableau de bord Administrateur</h3>
+          <span class="chip">12 cours · 234 étudiants</span>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h4>Gestion des cours</h4>
+            <p>Créez, modifiez et organisez les niveaux de formation.</p>
+            <button class="primary">Ajouter un cours</button>
+          </article>
+          <article class="card">
+            <h4>Contenus pédagogiques</h4>
+            <p>Vidéo, audio ou PDF, associez chaque ressource à un niveau.</p>
+            <button class="secondary">Gérer les contenus</button>
+          </article>
+          <article class="card">
+            <h4>Paiements</h4>
+            <p>Suivez les paiements, statuts et références LengoPay.</p>
+            <button class="ghost">Historique des paiements</button>
+          </article>
+        </div>
+        <div class="results">
+          <div>
+            <h4>Suivi des étudiants</h4>
+            <ul>
+              <li>A. Diallo · 75% · 3 cours</li>
+              <li>M. Traoré · 48% · 1 cours</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Quiz & évaluations</h4>
+            <ul>
+              <li>Dév Web: note min 70%</li>
+              <li>Marketing: note min 60%</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Bidaya © 2024 · Plateforme e-learning sécurisée et évolutive.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
